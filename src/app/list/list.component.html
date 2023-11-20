@@ -1,0 +1,9 @@
+<div class="list-wrapper" dir="rtl" *ngIf="textList.length">
+  <ul>
+    <li class="list-item" *ngFor="let item of textList; let i = index"   [ngClass]="{'list-item-done': item.done, 'aknar': item}" >
+      {{ item.title }}
+      <button class="btn-done" (click)="finishTask(i)">انجام شد</button>
+      <button class="btn-delete" (click)="deleteTask(i)">حذف</button>
+    </li>
+  </ul>
+</div>
